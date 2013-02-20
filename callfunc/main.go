@@ -12,7 +12,7 @@ func add(a, b int) int {
 }
 
 func sum(args ...int) int {
-    s := 0
+	s := 0
 	for _, i := range args {
 		s += i
 	}
@@ -21,7 +21,7 @@ func sum(args ...int) int {
 
 func divmod(a, b int) (div int, mod int) {
 	div = a / b
-	mod = a - div * b
+	mod = a - div*b
 	return
 }
 
