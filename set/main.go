@@ -14,7 +14,11 @@ type Piyo struct {
 	piyopiyo int
 }
 
+// Set value of Hoge or Piyo to v.
+// v is pointer of Hoge or Piyo and using as output parameter.
 func Set(v interface{}) {
+
+	// v must be pointer
 	rvp := reflect.ValueOf(v)
 	if rvp.Kind() != reflect.Ptr {
 		panic("v must be pointer")
@@ -29,10 +33,13 @@ func Set(v interface{}) {
 	case Piyo:
 		piyo := Piyo{200}
 		rv.Set(reflect.ValueOf(piyo))
+	default:
+		panic("v must be pointer of Hoge or Piyo.")
 	}
 }
 
 func main() {
+
 	var hoge Hoge
 	Set(&hoge)
 	fmt.Println(hoge)
