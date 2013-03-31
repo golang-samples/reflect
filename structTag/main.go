@@ -6,7 +6,7 @@ import (
 )
 
 type mytype struct {
-	field1 int `tag1:"tag1!!" tag2:"-" tag3`
+	field1 int `tag1:"tag1!!" tag2:"-" tag3:'a'`
 	field2 int `tag1:"" tag2:200 tag3:"hoge"`
 }
 
