@@ -62,4 +62,8 @@ func main() {
 	printAny(map[int]string{3: "foo", 7: "bar"})
 	
 	printAny(&i) // pointer
+
+	var ei interface{}
+	ei = u
+	printAny(ei)
 }
